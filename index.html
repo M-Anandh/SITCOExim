@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/foot.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <title>Home - Solai Exim</title>
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loading-bar"></div>
+      <div class="loading-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- navbar -->
+    <nav id="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo.jpg" alt="SITCO Exim" /></a>
+      </div>
+      <ul id="menuList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="#">Products</a>
+          <ul class="dropdown-menu">
+            <li><a href="spices.html">Spices</a></li>
+            <li><a href="Coconut.html">Coconunt</a></li>
+            <li><a href="Rice.html">Rice</a></li>
+            <li><a href="Nuts.html">Nuts</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </nav>
+
+    <!-- end of navbar -->
+
+    <!-- header -->
+    <div class="header">
+      <!-- bg video -->
+      <video autoplay muted loop id="bg-video">
+        <source src="assets/bg1.mp4" type="video/mp4" />
+      </video>
+      <!-- end of bg video -->
+
+      <div class="container">
+        <!-- hero section -->
+        <div class="hero-content">
+          <div class="hero-content-change">
+            <div>
+              <span>
+                <i class="fas fa-ship"></i>
+              </span>
+              <h3>
+                <div class="line"></div>
+                <span>global trade solutions</span>
+                <div class="line"></div>
+              </h3>
+              <h1 class="hero-lg-text">Connecting Businesses Beyond Borders</h1>
+            </div>
+          </div>
+
+          <blockquote class="hero-quote">
+            <!-- <span>
+              <i class="fas fa-quote-left"></i>
+            </span>
+            Trade is not just the exchange of goods; it is the bridge that
+            connects cultures, opportunities, and growth.
+            <span>
+              <i class="fas fa-quote-right"></i>
+            </span> -->
+          </blockquote>
+          <button
+            type="button"
+            class="hero-btn"
+            onclick="window.location.href='contact.html';"
+          >
+            Enquiry Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- end of header -->
+
+    <main>
+      <!-- About Section -->
+      <section id="about" class="about">
+        <h2 class="section-heading">Welcome to SITCO EXIM</h2>
+        <div class="about-content">
+          <img
+            src="assets/home-1.png"
+            alt="About Solai Exim"
+            class="about-img"
+          />
+          <div class="about-text">
+            <p>
+              At <strong>SITCO Exim</strong>, we specialize in seamless trade
+              solutions, connecting businesses worldwide. With a strong
+              foundation in export and import, we ensure efficient logistics,
+              transparent processes, and a commitment to excellence.
+              <em
+                >"Empowering global connections with trust and efficiency."</em
+              >
+            </p>
+            <p>
+              Our mission is to empower global businesses through innovative
+              trade services tailored to their needs. With years of experience
+              in the industry, our expert team is dedicated to providing
+              customized solutions that meet the unique challenges of each
+              client. Leveraging the latest technology and best practices, we
+              enhance efficiency, reduce costs, and unlock new opportunities in
+              international trade.
+            </p>
+            <a href="about.html" class="read-more">Read More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section id="why-choose-us" class="why-choose-us">
+        <h2 class="section-heading">Why Choose Us</h2>
+        <p>
+          <strong>SITCO Exim</strong> stands out for its exceptional service,
+          reliability, and dedication to client satisfaction. Our extensive
+          global network and innovative solutions make us the trusted partner
+          for businesses looking to expand their reach. Choose us for:
+        </p>
+        <ul class="reasons">
+          <li>
+            <i class="fas fa-truck"></i>
+            <strong>Fast and efficient delivery</strong>&nbsp; to global
+            destinations
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            <strong>Transparent and trustworthy processes</strong>
+          </li>
+          <li>
+            <i class="fas fa-network-wired"></i>
+            <strong>A wide-reaching global network</strong>
+          </li>
+          <li>
+            <i class="fas fa-user-friends"></i>
+            <strong>Personalized customer service</strong> &nbsp;tailored to
+            your needs
+          </li>
+          <li>
+            <i class="fas fa-lightbulb"></i>
+            <strong>Innovative solutions</strong> for complex logistics
+            challenges
+          </li>
+        </ul>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features">
+        <h2 class="section-heading">Features</h2>
+        <div class="feature-cards1">
+          <div class="cards1" style="--i: 0">
+            <i class="fas fa-globe"></i>
+            <h3>Global Reach</h3>
+            <p>
+              Connecting businesses across continents with our extensive
+              network.
+            </p>
+          </div>
+          <div class="cards1" style="--i: 1">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Fast Logistics</h3>
+            <p>Speedy delivery to meet the demands of global trade.</p>
+          </div>
+          <div class="cards1" style="--i: 2">
+            <i class="fas fa-handshake"></i>
+            <h3>Reliable Partnerships</h3>
+            <p>Building trust through consistent and dependable service.</p>
+          </div>
+          <div class="cards1" style="--i: 3">
+            <i class="fas fa-leaf"></i>
+            <h3>Sustainable Practices</h3>
+            <p>Committed to environmentally responsible logistics.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products">
+        <h2 class="section-heading">Our Products</h2>
+        <div class="product-carousel">
+          <div class="product-card" style="--i: 0; background-color: #ffcccb">
+            <a href="product.html">
+              <img
+                src="https://images.pexels.com/photos/7679438/pexels-photo-7679438.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Garments"
+              />
+              <h3>Garments</h3>
+            </a>
+          </div>
+          <div class="product-card" style="--i: 1; background-color: #add8e6">
+            <a href="product.html">
+              <img
+                src="https://cdn.pixabay.com/photo/2024/09/20/14/25/ai-generated-9061583_640.png"
+                alt="Spices"
+              />
+              <h3>Spices</h3>
+            </a>
+          </div>
+          <div class="product-card" style="--i: 2; background-color: #90ee90">
+            <a href="product.html">
+              <img
+                src="https://cdn.pixabay.com/photo/2023/07/20/18/42/green-cards1amom-8140138_640.jpg"
+                alt="Cardamom"
+              />
+              <h3>Cardamom</h3>
+            </a>
+          </div>
+          <div class="product-card" style="--i: 3; background-color: #ffeb3b">
+            <a href="product.html">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/06/01/22/33/spices-2364781_640.jpg"
+                alt="Pepper"
+              />
+              <h3>Pepper</h3>
+            </a>
+          </div>
+          <div class="product-card" style="--i: 4; background-color: #f0e68c">
+            <a href="product.html">
+              <img
+                src="https://images.pexels.com/photos/8951047/pexels-photo-8951047.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="White Sesame"
+              />
+              <h3>White Sesame</h3>
+            </a>
+          </div>
+          <div class="product-card" style="--i: 5; background-color: #ffe4e1">
+            <a href="product.html">
+              <img
+                src="https://cdn.pixabay.com/photo/2023/11/18/20/17/turmeric-8397097_640.png"
+                alt="Turmeric"
+              />
+              <h3>Turmeric</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="whatsapp-float">
+        <a href="https://wa.me/8111000002" target="_blank">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+          />
+        </a>
+      </div>
+
+      <div class="floating-icons">
+        <a href="tel:+918111000002" target="_blank" title="Call Us"
+          ><i class="fa fa-phone"></i
+        ></a>
+        <a href="mailto:info@example.com" target="_blank" title="Email Us"
+          ><i class="fa fa-envelope"></i
+        ></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="images/logo1.png" class="logo1" />
+          <p style="text-align: justify">
+            At SITCO Exim, we connect you with expert creators for personalized
+            guidance in career, skills, and exams. Committed to transparency and
+            security, Solai Exim is your partner in unlocking unique potential.
+            Join us for a journey of tailored excellence.
+          </p>
+        </div>
+        <div class="col">
+          <h3>
+            Office
+            <div class="under"><span></span></div>
+          </h3>
+          <p>Anna Nagar Main Road,</p>
+          <p>Thepakullam, Madurai,</p>
+          <p>Tamil Nadu, PIN 625014,</p>
+          <p>India</p>
+          <p class="email-id">
+            <a
+              href="mailto:mani02256@gmail.com"
+              style="color: inherit; text-decoration: none"
+              >mani02256@gmail.com</a
+            >
+          </p>
+          <p>
+            <a
+              href="tel:+918111000002"
+              style="color: inherit; text-decoration: none"
+              >+91 - 8111000002</a
+            >
+          </p>
+        </div>
+        <div class="col">
+          <h3>
+            Links
+            <div class="under"><span></span></div>
+          </h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>
+            Let's Connect
+            <div class="under"><span></span></div>
+          </h3>
+          <br />
+          <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <a href="https://www.linkedin.com/in/anandh-m/">
+        <p class="copyright" style="color: white">
+          SITCO Exim © 2025 - All rights reserved.
+        </p></a
+      >
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(
+          ".about, .why-choose-us, .features, .products"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        sections.forEach((section) => {
+          observer.observe(section); // Observe each section
+        });
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      let menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
+
+      function toggleMenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "300px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
