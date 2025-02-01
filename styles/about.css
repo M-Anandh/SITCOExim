@@ -169,7 +169,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 50px 20px;
-  background: url(/assets/missvis.jpg) center/cover no-repeat;
+  /* background: url(/assets/missvis.jpg) center/cover no-repeat; */
   color: #fff;
   text-align: center;
   opacity: 0;
