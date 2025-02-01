@@ -273,3 +273,15 @@ nav ul li a:hover {
     font-size: 16px;
   }
 }
+
+#language-select {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  z-index: 9999;
+  cursor: pointer;
+}
