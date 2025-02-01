@@ -1,0 +1,275 @@
+nav {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e34513; /* Different navbar color */
+  position: sticky; /* Sticky position to stay at the top */
+  top: 0;
+  width: 100%;
+  height: 70px;
+  transition: background 0.3s ease;
+  z-index: 1000;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Animation on hover */
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  color: #0077b6;
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon i {
+  color: #fff;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Semi-transparent white for blur effect */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    gap: 0;
+    overflow: hidden;
+  }
+  nav ul li {
+    padding: 20px;
+    padding-top: 0;
+  }
+  .menu-icon {
+    display: block;
+  }
+  #menuList {
+    transition: all 0.5s;
+  }
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #e34513;
+  width: 150px;
+  display: none;
+  flex-direction: column;
+  padding: -10px -10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 0.25px 0.25px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: #fff;
+  color: #0077b6;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Mobile Dropdown */
+@media (max-width: 600px) {
+  .dropdown-menu {
+    position: relative;
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: #e34513;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    text-align: center;
+    display: none;
+    box-shadow: none;
+  }
+  .dropdown-menu li {
+    padding: 2px;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-bar {
+  width: 80%;
+  height: 8px;
+  background-color: #3498db;
+  animation: loading 2s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.loading-dots {
+  display: flex;
+}
+
+.loading-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #3498db;
+  animation: dot-flashing 1s infinite alternate;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.floating-icons {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Reduced gap for better spacing */
+  z-index: 1000;
+}
+
+/* Individual Icon Styling */
+.floating-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Reduced size */
+  height: 30px; /* Reduced size */
+  background-color: #e34513;
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Adjusted font size */
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.floating-icons a:hover {
+  background-color: #007bff;
+  transform: scale(1.2); /* Zoom-in effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .floating-icons a {
+    width: 35px; /* Even smaller for mobile */
+    height: 35px;
+    font-size: 16px;
+  }
+}

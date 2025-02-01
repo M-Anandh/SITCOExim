@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Roboto"; */
+}
+
+body {
+  /* font-family: "Roboto", sans-serif; */
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.contact-bg {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(/assets/About.jpg);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-bg h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.contact-bg h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0;
+  letter-spacing: 4px;
+}
+.line div {
+  margin: 0 0.2rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3) {
+  height: 3px;
+  width: 70px;
+  background: #e34513;
+  border-radius: 5px;
+}
+.line {
+  display: flex;
+  align-items: center;
+}
+.line div:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  background: #e34513;
+  border-radius: 50%;
+}
+
+/* General About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+
+.about.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ff0000;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #ff0000, #ff1d1d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px dashed #ff0000;
+  padding-bottom: 0.5rem;
+}
+
+/* Paragraph animations */
+.about p {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  font-family: "Roboto";
+  color: #555;
+  text-align: justify;
+  line-height: 1.8;
+  opacity: 0; /* Hidden initially */
+  transform: translateY(100%); /* Move out of the viewport initially */
+  transition: transform 0.6s ease, opacity 0.6s ease; /* Smooth animation */
+}
+
+.about p:nth-of-type(1) {
+  transform: translateY(100%);
+  transition-delay: 0.3s; /* Slide in from the bottom */
+}
+
+.about p:nth-of-type(2) {
+  transform: translateY(-100%);
+  transition-delay: 0.6s; /* Slide in from the top */
+}
+
+.about.active p:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0); /* Move to the normal position */
+  transition-delay: 0.3s; /* Delay for the first paragraph */
+}
+
+.about.active p:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0); /* Move to the normal position */
+  transition-delay: 0.6s; /* Delay for the second paragraph */
+}
+
+/* Image slider animations */
+.image-slider {
+  margin: 30px 0;
+  opacity: 0; /* Hidden initially */
+  transform: scale(0.8); /* Shrink initially */
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.about.active .image-slider {
+  opacity: 1;
+  transform: scale(1); /* Zoom to normal size */
+  transition-delay: 1s; /* Delay after paragraphs */
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Mission and Vision Section */
+.mission-vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: url(/assets/missvis.jpg) center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+
+.mission-vision.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mission,
+.vision {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  opacity: 0; /* Hidden initially */
+  transform: scale(0.8) translateY(100%); /* Initial transform for mission (coming from bottom) */
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.mission-vision.active .mission {
+  opacity: 1;
+  transform: scale(1) translateY(0); /* Zoom in and slide from bottom */
+  transition-delay: 0.3s; /* Delay for the mission section */
+}
+
+.mission-vision.active .vision {
+  opacity: 1;
+  transform: scale(1) translateY(0); /* Zoom in and slide from top */
+  transition-delay: 0.6s; /* Delay for the vision section */
+}
+
+.vision {
+  transform: scale(0.8) translateY(-100%); /* Initial transform for vision (coming from top) */
+}
+
+.mission h2,
+.vision h2 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.mission p,
+.vision p {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.8;
+  text-align: justify;
+  font-family: "Roboto";
+}
+
+.mission i,
+.vision i {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+@keyframes slide {
+  0%,
+  33% {
+    transform: translateX(0);
+  }
+  33.33%,
+  66% {
+    transform: translateX(-100%);
+  }
+  66.67%,
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about h2,
+  .mission h2,
+  .vision h2 {
+    font-size: 2rem;
+  }
+
+  .about p,
+  .mission p,
+  .vision p {
+    font-size: 1rem;
+  }
+
+  .image-slider {
+    max-width: 500px;
+    height: 250px;
+  }
+
+  .image-slider img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about h2,
+  .mission h2,
+  .vision h2 {
+    font-size: 1.8rem;
+  }
+
+  .about p,
+  .mission p,
+  .vision p {
+    font-size: 0.95rem;
+  }
+
+  .image-slider {
+    max-width: 400px;
+    height: 200px;
+  }
+
+  .image-slider img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about h2,
+  .mission h2,
+  .vision h2 {
+    font-size: 1.5rem;
+  }
+
+  .about p,
+  .mission p,
+  .vision p {
+    font-size: 0.85rem;
+  }
+
+  .image-slider {
+    max-width: 300px;
+    height: 150px;
+  }
+
+  .image-slider img {
+    height: 150px;
+  }
+}
+
+/* Core Values Section */
+.core-values {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+
+.core-values.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.core-values h2 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  color: #ff0000;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.core-values-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.core-value {
+  flex: 1;
+  max-width: 150px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.core-value.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.core-value i {
+  font-size: 2rem; /* Size of the icons */
+  margin-bottom: 10px; /* Space below the icon */
+}
+
+.core-value p {
+  font-size: 1rem; /* Size of the text */
+  color: #555; /* Medium gray color for text */
+}
+
+/* Icon colors for each core value */
+.core-value:nth-child(1) i {
+  color: #ff5733; /* Color for Integrity */
+}
+
+.core-value:nth-child(2) i {
+  color: #33ff57; /* Color for Excellence */
+}
+
+.core-value:nth-child(3) i {
+  color: #3357ff; /* Color for Sustainability */
+}
+
+.core-value:nth-child(4) i {
+  color: #ff33a6; /* Color for Collaboration */
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .mission-vision {
+    padding: 30px 10px;
+  }
+
+  .mission,
+  .vision {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision {
+    padding: 30px 10px;
+  }
+
+  .mission h2,
+  .vision h2 {
+    font-size: 2rem;
+  }
+
+  .mission p,
+  .vision p {
+    font-size: 1rem;
+  }
+
+  .mission i,
+  .vision i {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-vision {
+    padding: 20px 5px;
+  }
+
+  .mission h2,
+  .vision h2 {
+    font-size: 1.5rem;
+  }
+
+  .mission p,
+  .vision p {
+    font-size: 0.9rem;
+  }
+
+  .mission i,
+  .vision i {
+    font-size: 2rem;
+  }
+}
+
+/* Counter We Offer Section */
+.counter-we-offer {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.counter-we-offer.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.counter-we-offer .section-heading {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.counter-we-offer p {
+  font-size: 1.3rem;
+  font-family: "Roboto";
+  color: #444; /* Slightly darker color for better contrast */
+  margin-bottom: 40px;
+  line-height: 1.8; /* Improve readability with proper line spacing */
+  text-align: justify; /* Align content for a cleaner look */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+  padding: 0 10px; /* Add slight padding for better alignment */
+  border-left: 4px solid #ff4500; /* Accent border for a visual highlight */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* Soft background to make it stand out */
+  border-radius: 5px; /* Rounded corners for a polished appearance */
+}
+
+/* Counter Cards Grid */
+.counter-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Counter Card */
+.counter-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.counter-we-offer.active .counter-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--i, 0) * 0.2s);
+}
+
+.counter-card:nth-child(odd) {
+  transform: translateY(50px); /* Slide from bottom for odd cards */
+}
+
+.counter-card:nth-child(even) {
+  transform: translateY(-50px); /* Slide from top for even cards */
+}
+
+/* Card Image */
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-image:hover {
+  transform: scale(1.05); /* Zoom on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Overlay */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.card-image:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.card-overlay h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-image {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
