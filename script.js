@@ -107,3 +107,32 @@ window.onload = function () {
   const loader = document.getElementById("loader");
   loader.style.display = "none";
 };
+// Disable Right Click
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+// Disable Certain Key Combinations
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "F12" || // Disable F12
+    (event.ctrlKey &&
+      event.shiftKey &&
+      (event.key === "I" || event.key === "J")) || // Disable Ctrl+Shift+I/J
+    (event.ctrlKey && event.key === "U") ||
+    (event.ctrlKey && event.key === "u") // Disable Ctrl+U
+  ) {
+    event.preventDefault();
+  }
+});
+
+// Detect Developer Tools Open
+(function () {
+  const threshold = 160;
+  setInterval(() => {
+    if (
+      window.outerWidth - window.innerWidth > threshold ||
+      window.outerHeight - window.innerHeight > threshold
+    ) {
+      document.body.innerHTML = "<h1>Access Denied!</h1>";
+    }
+  }, 1000);
+})();
