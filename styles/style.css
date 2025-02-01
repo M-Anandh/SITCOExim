@@ -531,13 +531,13 @@ section {
 /*Feature */
 
 .features {
-  background-image: url(/assets/features.jpg);
+  /* background-image: url(/assets/features.jpg);
   background-size: cover;
   color: #fff;
   padding: 50px 20px;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease; */
 }
 
 .features.active {
